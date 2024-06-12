@@ -1,0 +1,48 @@
+{
+  "configs": {
+    "c": {
+      "command_args": {
+        "required": [
+          "input_file",
+          "output_file"
+        ],
+        "optional": {
+          "timeout": -1,
+          "run_in_shell": false,
+          "lang_standard": "c2x"
+        }
+      },
+      "before_compile_command": "",
+      "compile_command": "gcc -std=${lang_standard} ${input_file} -o ${output_file}",
+      "after_compile_command": ""
+    },
+    "c++": {
+      "command_args": {
+        "required": [
+          "input_file",
+          "output_file"
+        ],
+        "optional": {
+          "timeout": -1,
+          "run_in_shell": false,
+          "lang_standard": "c++17"
+        }
+      },
+      "before_compile_command": "",
+      "compile_command": "g++ -v -std={lang_standard} {input_file} -o {output_file}",
+      "after_compile_command": ""
+    },
+    "python": {
+      "command_args": {
+        "required": [],
+        "optional": {
+          "timeout": -1,
+          "run_in_shell": false
+        }
+      },
+      "before_compile_command": "",
+      "compile_command": "",
+      "after_compile_command": ""
+    }
+  }
+}
